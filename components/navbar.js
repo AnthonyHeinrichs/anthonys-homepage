@@ -1,7 +1,9 @@
 import Logo from './logo'
 import NextLink from 'next/link'
+import ThemeToggleButton from './layouts/light-dark-toggle-button'
 import {
   Container,
+  Text,
   Box,
   Link,
   Stack,
@@ -38,7 +40,7 @@ const Navbar = props => {
       {...props}>
       <Container display='flex' p={2} maxW='container.md' wrap='wrap' align='center' justify='space-between'>
         <Flex align='center' mr={5}>
-          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
+          <Heading as='h2' size='lg' letterSpacing='tighter'>
             <Logo />
           </Heading>
         </Flex>
@@ -49,11 +51,18 @@ const Navbar = props => {
           alignItems='center'
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}>
-          <LinkItem href='/projects' path={path}>Projects</LinkItem>
-          <LinkItem href='/cv' path={path}>CV</LinkItem>
-          <LinkItem href='/contact' path={path}>Contact</LinkItem>
+          <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            fontFamily='Open Sans'
+            fontWeight='normal'
+            ml={3}
+            >
+            <LinkItem href='/projects' path={path}>Projects</LinkItem>
+            <LinkItem href='/cv' path={path}>CV</LinkItem>
+            <LinkItem href='/contact' path={path}>Contact</LinkItem>
+          </Text>
         </Stack>
         <Box flex={1} align="right">
+          <ThemeToggleButton />
           <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
             <Menu>
               <MenuButton as={IconButton} icon={<HamburgerIcon />} variant='outline' aria-label='options' />

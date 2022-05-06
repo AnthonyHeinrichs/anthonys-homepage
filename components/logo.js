@@ -26,8 +26,8 @@ const Logo = () => {
         <LogoBox>
           <Image src={footPrintImg} width={20} height={20} alt='logo' />
           <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c'
-            fontWeight='bold'
+            fontFamily='Open Sans'
+            fontWeight='normal'
             ml={3}
           >
             Anthony Heinrichs
