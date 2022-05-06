@@ -22,6 +22,14 @@ const Page = () => {
         </Box>
       </Box>
       <Section delay={0.1}>
+      <Heading as='h3' variant='section-title'>
+          Bio
+        </Heading>
+        <Paragraph>
+        After working with developers for 5 years, I realized I wanted to become one.
+        I like working on amazing teams, learning, solving problems, and seeing the result of my work first-hand.
+        I recently finished the Le Wagon web development boot camp, and I am looking for a position as a junior full stack developer.
+        </Paragraph>
         <Heading as='h3' variant='section-title'>
           Projects
         </Heading>
