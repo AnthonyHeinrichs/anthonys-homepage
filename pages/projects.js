@@ -1,0 +1,40 @@
+import { Container, Box, Heading, AspectRatio } from '@chakra-ui/react'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+
+const Projects = () => {
+
+  return (
+    <Container>
+      <Box display={{ md: 'flex' }} mt={100}>
+        <Box flexGrow={1}>
+          <Heading as='h2' variant='page-title'>
+            Projects
+          </Heading>
+        </Box>
+      </Box>
+      <Section delay={0.1}>
+        <Heading as='h3' variant='section-title'>
+          Dish List
+        </Heading>
+        <Paragraph>
+          Dish List was a collaborative project that was built during the last two weeks as a Web Developer student at Le Wagon.
+          I came up with the idea of building a web application for finding authentic food by the specific dish in your
+          local area, and built this web applicatin with the help of two other developers. For this project we used Ruby, Javascript, HTML and SCSS.
+        </Paragraph>
+        <Heading as='h3' variant='section-title'>
+            Dish List Demo
+          </Heading>
+        <AspectRatio maxW='500px' ratio={4 / 3} mt={8}>
+          <iframe
+            title='Dish List'
+            src='https://www.youtube.com/embed/2uIrUrGG89c?start=2129'
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Section>
+    </Container>
+  )
+}
+
+export default Projects
