@@ -1,6 +1,7 @@
 import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid, IconButton, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from  '../components/paragraph'
+import Skill from '../components/skill'
 import { DiCss3Full, DiReact, DiHtml5, DiJavascript1, DiHeroku, DiPostgresql, DiMongodb, DiRuby, DiRor, DiBootstrap } from 'react-icons/di'
 import { SiNextdotjs } from 'react-icons/si'
 
@@ -46,64 +47,19 @@ const Page = () => {
             Frontend
             <SimpleGrid columns={[2, null, 3]} spacing='20px'>
               <Box height='60px' mt={6}>
-              <Popover>
-                <PopoverTrigger>
-                  <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={<DiCss3Full />} />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverCloseButton />
-                  <PopoverHeader fontWeight='bold'>CSS</PopoverHeader>
-                  <PopoverBody>Cascading Style Sheets is a stylesheet language used to describe the presentation of a document written in HTML or XML.</PopoverBody>
-                </PopoverContent>
-              </Popover>
+                <Skill logo={<DiCss3Full />} language='CSS' body='Cascading Style Sheets is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.' />
               </Box>
               <Box height='60px' mt={6}>
-              <Popover>
-                <PopoverTrigger>
-                  <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={<DiHtml5 />} />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverCloseButton />
-                  <PopoverHeader fontWeight='bold'>HTML</PopoverHeader>
-                  <PopoverBody>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.</PopoverBody>
-                </PopoverContent>
-              </Popover>
+                <Skill logo={<DiHtml5 />} language='HTML' body='The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.' />
               </Box>
               <Box height='60px' mt={6}>
-              <Popover>
-                <PopoverTrigger>
-                  <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={<DiJavascript1 />} />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverCloseButton />
-                  <PopoverHeader fontWeight='bold'>Javascript</PopoverHeader>
-                  <PopoverBody>JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.</PopoverBody>
-                </PopoverContent>
-              </Popover>
+                <Skill logo={<DiJavascript1 />} language='Javascript' body='JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.' />
               </Box>
               <Box height='60px' mt={6}>
-              <Popover>
-                <PopoverTrigger>
-                  <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={<DiReact />} />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverCloseButton />
-                  <PopoverHeader fontWeight='bold'>React</PopoverHeader>
-                  <PopoverBody>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.</PopoverBody>
-                </PopoverContent>
-              </Popover>
+                <Skill logo={<DiReact />} language='React' body='React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.' />
               </Box>
               <Box height='60px' mt={6}>
-              <Popover>
-                <PopoverTrigger>
-                  <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={<DiBootstrap />} />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverCloseButton />
-                  <PopoverHeader fontWeight='bold'>Bootstrap</PopoverHeader>
-                  <PopoverBody>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.</PopoverBody>
-                </PopoverContent>
-              </Popover>
+                <Skill logo={<DiBootstrap />} language='Bootstrap' body='Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.' />
               </Box>
             </SimpleGrid>
           </Box>
