@@ -1,4 +1,4 @@
-import { Image, Center, Button, useColorModeValue, Container, SimpleGrid } from '@chakra-ui/react'
+import { Center, Button, useColorModeValue, Container, SimpleGrid } from '@chakra-ui/react'
 import { saveAs } from 'file-saver'
 import CustomModal from '../components/modal'
 

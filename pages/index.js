@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid, UnorderedList, ListItem } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Skill from '../components/skill'
@@ -34,9 +34,12 @@ const Page = () => {
         <Heading as='h3' variant='section-title'>
           Interests
         </Heading>
-        <Paragraph>
-          Surfing, snowboarding, skateboarding, volleyball, music, meditation
-        </Paragraph>
+        <UnorderedList>
+          <ListItem>Lorem ipsum dolor sit amet</ListItem>
+          <ListItem>Consectetur adipiscing elit</ListItem>
+          <ListItem>Integer molestie lorem at massa</ListItem>
+          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+        </UnorderedList>
         <Heading as='h3' variant='section-title' mt={8} mb={8}>
           Skills
         </Heading>
