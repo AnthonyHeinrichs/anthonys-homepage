@@ -4,7 +4,7 @@ const Skill = ({logo, language, body}) => {
   return (
     <Popover>
       <PopoverTrigger>
-        <IconButton colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' size='lg' fontSize='40px' icon={logo} />
+        <IconButton bg='none' variant='solid' size='lg' fontSize='40px' icon={logo} />
       </PopoverTrigger>
       <PopoverContent>
         <PopoverCloseButton />

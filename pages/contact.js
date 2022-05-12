@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Input, Button, useColorModeValue, useToast } from '@chakra-ui/react'
+import { Container, Box, Heading, Input, Button, useToast, Textarea } from '@chakra-ui/react'
 import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import emailjs from 'emailjs-com'
@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <Container>
-      <Box display={{ md: 'flex' }} mt={100}>
+      <Box display={{ md: 'flex' }} mt={16}>
       <Box flexGrow={1}>
         <Heading as='h2' variant='page-title'>
           Send me a message
@@ -52,11 +52,12 @@ const Contact = () => {
               id='name'
               placeholder='Name'
               name='user_name'
+              mt={4}
               borderColor={{ color: 'inherit' }}
               _placeholder={{ color: 'inherit' }}
               {...register('name', {
                 required: 'This is required',
-              })} mt={4}
+              })}
             />
             <Input
               id='email'
@@ -64,27 +65,29 @@ const Contact = () => {
               name='user_email'
               borderColor={{ color: 'inherit' }}
               _placeholder={{ color: 'inherit' }}
+              mt={4}
               {...register('email', {
                 required: 'This is required',
                 minLength: { value: 4, message: 'Minimum length should be 4' },
-              })} mt={4}
+              })}
             />
-            <Input
+            <Textarea
               id='message'
               placeholder='Message'
               name='message'
               borderColor={{ color: 'inherit' }}
                _placeholder={{ color: 'inherit' }}
+               mt={4}
               {...register('message', {
                 required: 'This is required',
                 minLength: { value: 4, message: 'Minimum length should be 4' },
-              })} mt={4}
+              })}
             />
             <FormErrorMessage>
               {errors.name && errors.name.message}
             </FormErrorMessage>
           </FormControl>
-          <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit' variant='solid'>
+          <Button mt={4} width={40} colorScheme='teal' isLoading={isSubmitting} type='submit' variant='solid'>
             Submit
           </Button>
         </form>

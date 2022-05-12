@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <Container>
-      <Box display={{ md: 'flex' }} mt={100}>
+      <Box display={{ md: 'flex' }} mt={16}>
         <Box flexGrow={1}>
           <Heading as='h2' variant='page-title'>
             Projects
@@ -14,7 +14,7 @@ const Projects = () => {
         </Box>
       </Box>
       <Section delay={0.1}>
-        <Heading as='h3' variant='section-title'>
+        <Heading as='h3' variant='section-title' mt={6}>
           Dish List
         </Heading>
         <Paragraph>
@@ -22,7 +22,7 @@ const Projects = () => {
           I came up with the idea of building a web application for finding authentic food by the specific dish in your
           local area, and built this web applicatin with the help of two other developers. For this project we used Ruby, Javascript, HTML and SCSS.
         </Paragraph>
-        <Heading as='h3' variant='section-title'>
+        <Heading as='h3' variant='section-title' mt={6}>
             Dish List Demo
           </Heading>
         <AspectRatio maxW='500px' ratio={4 / 3} mt={8}>

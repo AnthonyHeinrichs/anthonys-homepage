@@ -1,10 +1,9 @@
-import { Center, Button, useColorModeValue, Container, SimpleGrid } from '@chakra-ui/react'
+import { Center, Button, Container, SimpleGrid, Image, Box } from '@chakra-ui/react'
 import { saveAs } from 'file-saver'
-import CustomModal from '../components/modal'
 import Section from '../components/section'
 
 const Cv = () => {
-  const clickHandler = () => {
+  const downloadHandler = () => {
     saveAs(
       '/contents/cv.pdf',
       'Anthony Heinrichs Fullstack CV.pdf'
@@ -16,14 +15,14 @@ const Cv = () => {
       <Section delay={0.1}>
         <Center>
           <SimpleGrid columns={[1]}>
-            <Center mt={8}>
-              <Button colorScheme={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} variant='outline' onClick={clickHandler}>
-                Download my Resume
-              </Button>
-            </Center>
-            <Center mt={8}>
-              <CustomModal />
-            </Center>
+              <Box boxShadow='dark-lg' p={1} rounded='md' bg='white' mt={16}>
+                <Image borderColor='whiteAlpha.800' borderStyle='solid' maxWidth='300px' src='/images/anthony-heinrichs-cv.png' alt='Profile Pciture' />
+              </Box>
+              <Center>
+                <Button colorScheme='teal' variant='solid' onClick={downloadHandler} mt={4} width={40}>
+                  Download my CV
+                </Button>
+              </Center>
           </SimpleGrid>
         </Center>
       </Section>
