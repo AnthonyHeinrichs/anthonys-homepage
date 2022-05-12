@@ -20,14 +20,14 @@ const Contact = () => {
   } = useForm()
 
   function onSubmit(values) {
-    emailjs.sendForm('service_bdo7xz2', 'template_80ivt87', form.current, 'kwKSPUi0QO0oI8i6K')
-
     return new Promise((resolve) => {
       setTimeout(() => {
+        emailjs.sendForm('service_bdo7xz2', 'template_80ivt87', form.current, 'kwKSPUi0QO0oI8i6K')
         toast({
           title: 'Message sent.',
           description: "Thanks for sending me a message!",
           status: 'success',
+          colorScheme: 'teal',
           duration: 9000,
           isClosable: true,
         })
