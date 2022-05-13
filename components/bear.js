@@ -10,7 +10,7 @@ const LostBear = () => {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: require('./bear.json')
+      animationData: require('./lotties/bear.json')
     })
     return () => instance.destroy()
   }, [])
