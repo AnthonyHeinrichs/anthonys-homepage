@@ -3,11 +3,10 @@ import Layout from '../components/layouts/main'
 import theme from '../lib/theme'
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
-import { zeroRightClassName } from 'react-remove-scroll-bar';
 
 const Website = ({ Component, pageProps, router }) => {
   return (
-    <ChakraProvider theme={theme} className={zeroRightClassName}>
+    <ChakraProvider theme={theme}>
       <Fonts />
       <Layout router={router}>
         <AnimatePresence exitBeforeEnter intial={true}>
