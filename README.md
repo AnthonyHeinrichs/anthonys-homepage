@@ -1,1 +1,1 @@
-Website design inspiration and help taken from https://www.craftz.dog/
+Website design inspiration and help from https://www.craftz.dog/
