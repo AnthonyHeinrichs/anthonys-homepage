@@ -29,7 +29,7 @@ const Page = () => {
           </Heading>
           <Paragraph>
             Originally from a small remote fishing town in the north of Vancouver Island 
-            where the Island's black bear population is twice that of the population of the town. 
+            where the Island&#39;s black bear population is twice that of the population of the town. 
             I got my bachelors degree in Business Administration and worked a few years in logistics 
             and fulfillment before stepping into a technology focused role. I have always been 
             interested in technology since I was kid, trying my best to learn how to use the command terminal in MS-DOS 
