@@ -24,6 +24,11 @@ const Contact = () => {
     return new Promise((resolve) => {
       setTimeout(() => {
         emailjs.sendForm('service_bdo7xz2', 'template_80ivt87', form.current, 'kwKSPUi0QO0oI8i6K')
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+       }, function(error) {
+          console.log('FAILED...', error);
+       });
         toast({
           title: 'Message sent.',
           description: "Thanks for sending me a message!",
@@ -51,7 +56,7 @@ const Contact = () => {
               <Input
                 id='name'
                 placeholder='Name'
-                name='user_name'
+                name='name'
                 mt={4}
                 borderColor={{ color: 'inherit' }}
                 _placeholder={{ color: 'inherit' }}
@@ -62,7 +67,7 @@ const Contact = () => {
               <Input
                 id='email'
                 placeholder='Email'
-                name='user_email'
+                name='email'
                 borderColor={{ color: 'inherit' }}
                 _placeholder={{ color: 'inherit' }}
                 mt={4}
