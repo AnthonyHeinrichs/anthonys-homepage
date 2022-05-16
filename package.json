@@ -24,7 +24,8 @@
     "react-icons": "^4.3.1",
     "react-lottie": "^1.2.3",
     "react-lottie-player": "^1.4.3",
-    "react-pdf": "^5.7.2"
+    "react-pdf": "^5.7.2",
+    "react-remove-scroll-bar": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "8.14.0",
