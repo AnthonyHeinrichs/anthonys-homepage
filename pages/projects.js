@@ -17,10 +17,13 @@ const Projects = () => {
         <Heading as='h3' variant='section-title' mt={6}>
           Dish List
         </Heading>
+        <Box mb={6}>
+          <em> Ruby - Rails - HTML - Sass - PostgreSQL </em>
+        </Box>
         <Paragraph>
           Dish List was a collaborative project that was built during the last two weeks as a Web Developer student at Le Wagon.
           I came up with the idea of building a web application for finding authentic food by the specific dish in your
-          local area, and built this web applicatin with the help of two other developers. For this project we used Ruby, Javascript, HTML and SCSS.
+          local area, and built this web applicatin with the help of two other developers over a period of two weeks.
         </Paragraph>
         <Heading as='h3' variant='section-title' mt={6}>
             Dish List Demo

@@ -38,12 +38,10 @@ const Contact = () => {
 
   return (
     <Container>
-      <Box display={{ md: 'flex' }} mt={16}>
-      <Box flexGrow={1}>
+      <Box display={{ md: 'flex' }} mt={16} mb={8} flexGrow={1}>
         <Heading as='h2' variant='page-title'>
           Send me a message
         </Heading>
-      </Box>
       </Box>
       <Section delay={0.1}>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -87,7 +85,7 @@ const Contact = () => {
               {errors.name && errors.name.message}
             </FormErrorMessage>
           </FormControl>
-          <Button mt={4} width={40} colorScheme='teal' isLoading={isSubmitting} type='submit' variant='solid'>
+          <Button mt={6} width={40} colorScheme='teal' isLoading={isSubmitting} type='submit' variant='solid'>
             Submit
           </Button>
         </form>

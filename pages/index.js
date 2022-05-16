@@ -23,21 +23,27 @@ const Page = () => {
       </Box>
       <Section delay={0.1}>
         <Heading as='h3' variant='section-title'>
-          Bio
+          About me
         </Heading>
         <Paragraph>
-          After working with developers for 5 years, I realized I wanted to become one.
-          I like working on amazing teams, learning, solving problems, and seeing the result of my work first-hand.
-          I recently finished the Le Wagon web development boot camp, and I am looking for a position as a junior full stack developer.
+          Originally from a small remote fishing town in the north of Vancouver Island 
+          where the Island's black bear population is twice that of the population of the town. 
+          I got my bachelors degree in Business Administration and worked a few years in logistics 
+          and fulfillment before stepping into a technology focused role. I have always been 
+          interested in technology since I was kid, trying my best to learn how to use the command terminal in MS-DOS 
+          so I could load video games from floppy discs, but it was only after working with teams of developers that 
+          I soon realized I wanted to study to become one myself. After recently finishing the 
+          Le Wagon Web Development bootcamp, I have been studying full time in hopes to work as a full-time developer. 
         </Paragraph>
         <Heading as='h3' variant='section-title' mt={6}>
           Interests
         </Heading>
         <UnorderedList>
-          <ListItem>Lorem ipsum dolor sit amet</ListItem>
-          <ListItem>Consectetur adipiscing elit</ListItem>
-          <ListItem>Integer molestie lorem at massa</ListItem>
-          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+          <ListItem>Traveling and learning about new cultures and foods</ListItem>
+          <ListItem>Cooking the new foods I have learned about</ListItem>
+          <ListItem>Any sports involving teams, bikes, or boards (surf, skate, snow)</ListItem>
+          <ListItem>All different types of music</ListItem>
+          <ListItem>Mindfulness</ListItem>
         </UnorderedList>
         <Heading as='h3' variant='section-title' mt={8} mb={8}>
           Skills
