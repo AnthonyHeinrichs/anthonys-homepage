@@ -9,8 +9,9 @@ import skillDataFront from '../lib/skillDataFront'
 const Page = () => {
   const backSkills = skillDataBack.map(skill => {
     return (
-      <Box height='60px'>
-        <Skill logo={skill.logo}
+      <Box height='60px' key={skill.id}>
+        <Skill 
+          logo={skill.logo}
           language={skill.language}
           body={skill.body} />
       </Box>
@@ -19,8 +20,9 @@ const Page = () => {
 
   const frontSkills = skillDataFront.map(skill => {
     return(
-      <Box height='60px'>
-        <Skill logo={skill.logo}
+      <Box height='60px' key={skill.id}>
+        <Skill 
+          logo={skill.logo}
           language={skill.language}
           body={skill.body} />
       </Box>
