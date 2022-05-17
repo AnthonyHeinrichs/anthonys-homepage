@@ -3,10 +3,30 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Skill from '../components/skill'
 import Layout from '../components/layouts/article'
-import { DiCss3Full, DiReact, DiHtml5, DiJavascript1, DiHeroku, DiPostgresql, DiMongodb, DiRuby, DiRor, DiBootstrap } from 'react-icons/di'
-import { SiNextdotjs } from 'react-icons/si'
+import skillDataBack from '../lib/skillDataBack'
+import skillDataFront from '../lib/skillDataFront'
 
 const Page = () => {
+  const backSkills = skillDataBack.map(skill => {
+    return (
+      <Box height='60px'>
+        <Skill logo={skill.logo}
+          language={skill.language}
+          body={skill.body} />
+      </Box>
+    )
+  })
+
+  const frontSkills = skillDataFront.map(skill => {
+    return(
+      <Box height='60px'>
+        <Skill logo={skill.logo}
+          language={skill.language}
+          body={skill.body} />
+      </Box>
+    )
+  })
+
   return (
     <Layout>
       <Container>
@@ -56,31 +76,7 @@ const Page = () => {
                 Frontend
               </Text>
               <SimpleGrid columns={[2, null, 3]} spacing='20px'>
-                <Box height='60px'>
-                  <Skill logo={<DiCss3Full />}
-                    language='CSS'
-                    body='Cascading Style Sheets is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiHtml5 />}
-                    language='HTML'
-                    body='The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiJavascript1 />}
-                    language='Javascript'
-                    body='JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiReact />}
-                    language='React'
-                    body='React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiBootstrap />}
-                    language='Bootstrap'
-                    body='Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.' />
-                </Box>
+                {frontSkills}
               </SimpleGrid>
             </Box>
             <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={2} align='center'>
@@ -88,36 +84,7 @@ const Page = () => {
                 Backend
               </Text>
               <SimpleGrid columns={[2, null, 3]} spacing='20px'>
-                <Box height='60px'>
-                  <Skill logo={<DiRuby />}
-                    language='Ruby'
-                    body='Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiPostgresql />}
-                    language='PostgreSQL'
-                    body='PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiMongodb />}
-                    language='MongoDB'
-                    body='MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiHeroku />}
-                    language='Heroku'
-                    body='Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<DiRor />}
-                    language='Ruby on Rails'
-                    body='Ruby on Rails is a server-side web application framework written in Ruby.' />
-                </Box>
-                <Box height='60px'>
-                  <Skill logo={<SiNextdotjs />}
-                    language='Next.js'
-                    body='Next.js is an open-source web development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites.' />
-                </Box>
+                {backSkills}
               </SimpleGrid>
             </Box>
             <Box>
