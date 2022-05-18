@@ -22,12 +22,12 @@ const Projects = () => {
             </Heading>
           </Link>
           <Box mb={2}>
-            <em> Ruby - Rails - HTML - Sass - PostgreSQL </em>
+            <em> Ruby - Rails - HTML - Sass - PostgreSQL - Heroku </em>
           </Box>
           <Paragraph>
             Dish List was a collaborative project that was built during the last two weeks as a Web Developer student at Le Wagon.
             I came up with the idea of building a web application for finding authentic food by the specific dish in your
-            local area, and built this web applicatin with the help of two other developers over a period of two weeks.
+            local area, and built this web application with the help of two other developers over a period of two weeks.
           </Paragraph>
           <AspectRatio maxW='500px' ratio={4 / 3} mt={6} mb={2}>
             <iframe
