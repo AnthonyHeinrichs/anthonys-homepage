@@ -45,7 +45,7 @@ const Projects = () => {
           </Heading>
         </Link>
           <Box mb={2}>
-            <em> React </em>
+            <em> React - JSX - CSS </em>
           </Box>
           <Paragraph>
             Basic travel journal I built one morning to document all the different places I have traveled to while living in Europe.
