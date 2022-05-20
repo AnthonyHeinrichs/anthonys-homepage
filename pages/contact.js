@@ -6,7 +6,6 @@ import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import {
   FormControl,
-  FormLabel,
   FormErrorMessage,
 } from '@chakra-ui/react'
 
