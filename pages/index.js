@@ -5,12 +5,14 @@ import Skill from '../components/skill'
 import Layout from '../components/layouts/article'
 import skillDataBack from '../lib/skillDataBack'
 import skillDataFront from '../lib/skillDataFront'
+import skillDataFrame from '../lib/skillDataFrame'
+import skillDataOps from '../lib/skillDataOps'
 
 const Page = () => {
   const backSkills = skillDataBack.map(skill => {
     return (
       <Box height='60px' key={skill.id}>
-        <Skill 
+        <Skill
           logo={skill.logo}
           language={skill.language}
           body={skill.body} />
@@ -21,7 +23,29 @@ const Page = () => {
   const frontSkills = skillDataFront.map(skill => {
     return(
       <Box height='60px' key={skill.id}>
-        <Skill 
+        <Skill
+          logo={skill.logo}
+          language={skill.language}
+          body={skill.body} />
+      </Box>
+    )
+  })
+
+  const frameSkills = skillDataFrame.map(skill => {
+    return(
+      <Box height='60px' key={skill.id}>
+        <Skill
+          logo={skill.logo}
+          language={skill.language}
+          body={skill.body} />
+      </Box>
+    )
+  })
+
+  const opsSkills = skillDataOps.map(skill => {
+    return(
+      <Box height='60px' key={skill.id}>
+        <Skill
           logo={skill.logo}
           language={skill.language}
           body={skill.body} />
@@ -50,14 +74,13 @@ const Page = () => {
             About me
           </Heading>
           <Paragraph>
-            Originally from a small remote fishing town in the north of Vancouver Island 
-            where the Island&#39;s black bear population is twice that of the population of the town. 
-            I got my bachelors degree in Business Administration and worked a few years in logistics 
-            and fulfillment before stepping into a technology focused role. I have always been 
-            interested in technology since I was kid, trying my best to learn how to use the command terminal in MS-DOS 
-            so I could load video games from floppy discs, but it was only after working with teams of developers that 
-            I soon realized I wanted to study to become one myself. After recently finishing the 
-            Le Wagon Web Development bootcamp, I have been studying full time in hopes to work as a full-time developer. 
+            Originally from a small remote fishing town in the north of Vancouver Island
+            where the Island&#39;s black bear population is twice that of the population of the town.
+            I got my bachelors degree in Business Administration and worked a few years in logistics
+            and fulfillment before stepping into a technology focused role. I have always been
+            interested in technology, but it was only after working with teams of developers that
+            I soon realized I wanted to study to become one myself. After recently finishing the
+            Le Wagon Web Development bootcamp, I have been studying full time in hopes to work as a full-time developer.
           </Paragraph>
           <Heading as='h3' variant='section-title' mt={6}>
             Interests
@@ -73,23 +96,37 @@ const Page = () => {
             Skills
           </Heading>
           <SimpleGrid columns={[2]} spacing='16px'>
-            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={2} align='center'>
-              <Text mb={4}>
-                Frontend
-              </Text>
-              <SimpleGrid columns={[2, null, 3]} spacing='20px'>
-                {frontSkills}
-              </SimpleGrid>
-            </Box>
-            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={2} align='center'>
+            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={4} align='center'>
               <Text mb={4}>
                 Backend
               </Text>
-              <SimpleGrid columns={[2, null, 3]} spacing='20px'>
+              <SimpleGrid columns={[2, null, 4]} spacing='8px'>
                 {backSkills}
               </SimpleGrid>
             </Box>
-            <Box>
+            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={4} align='center'>
+              <Text mb={4}>
+                Frontend
+              </Text>
+              <SimpleGrid columns={[2, null, 4]} spacing='8px'>
+                {frontSkills}
+              </SimpleGrid>
+            </Box>
+            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={4} align='center'>
+              <Text mb={4}>
+                Frameworks
+              </Text>
+              <SimpleGrid columns={[2, null, 4]} spacing='8px'>
+                {frameSkills}
+              </SimpleGrid>
+            </Box>
+            <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={4} align='center'>
+              <Text mb={4}>
+                Devops
+              </Text>
+              <SimpleGrid columns={[2, null, 4]} spacing='8px'>
+                {opsSkills}
+              </SimpleGrid>
             </Box>
           </SimpleGrid>
         </Section>

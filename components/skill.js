@@ -1,4 +1,4 @@
-import { IconButton, useColorModeValue, Popover, PopoverTrigger, PopoverContent, PopoverCloseButton, PopoverHeader, PopoverBody } from '@chakra-ui/react'
+import { IconButton, Popover, PopoverTrigger, PopoverContent, PopoverCloseButton, PopoverHeader, PopoverBody } from '@chakra-ui/react'
 
 const Skill = ({logo, language, body}) => {
   return (
