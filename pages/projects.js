@@ -36,7 +36,22 @@ const Projects = () => {
               allowFullScreen
             />
           </AspectRatio>
-
+        </Section>
+        <Section delay={0.1}>
+        <Link href='https://help-local-germany.vercel.app/' isExternal>
+          <Heading as='h3' variant='section-title' mt={8}>
+            Help Local - In Progress
+          </Heading>
+        </Link>
+          <Box mb={2}>
+            <em> Next.js - Node.js - React - SASS </em>
+          </Box>
+          <Paragraph>
+            Help Local is a collaborative mobile application. The purpose of help local is to connect people in need
+            with someone who has something to give. With help local, you can open requests or add offers for different
+            needs.
+          </Paragraph>
+          <Image src='/images/help-local.png' alt='Help Local' mt={6} mb={2}/>
         </Section>
         <Section delay={0.1}>
         <Link href='https://my-travel-journal-fawn.vercel.app/' isExternal>
