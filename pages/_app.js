@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import Head from 'next/head';
+import Head from 'next/head'
+import Image from 'next/image'
 import Layout from '../components/layouts/main'
 import theme from '../lib/theme'
 import Fonts from '../components/fonts'
@@ -11,6 +12,7 @@ const Website = ({ Component, pageProps, router }) => {
       <Head>
         <title>Anthony Heinrichs - Developer Profile</title>
         <link rel='icon' href='/images/profilelogo.svg' />
+        <Image alt='Anthony Heinrichs' src='/images/developer-site.jpg' layout='fill' />
       </Head>
       <ChakraProvider theme={theme}>
         <Fonts />
